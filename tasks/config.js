@@ -36,8 +36,8 @@ var config = {
   finalAppCSS: 'allApp.css',
   releaseSource: './dist/public',
   dist: './dist',
-  heroku: './HEROKU/crmovil/dist',
-  herokuRoot: './HEROKU/crmovil',
+  heroku: './HEROKU/app/dist',
+  herokuRoot: './HEROKU/app',
   bowerReleaseFiles: './src/client/public/assets/js',
 
   releaseAppCode: ['./dist/**/allApp-*.js'],
