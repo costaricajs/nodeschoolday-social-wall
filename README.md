@@ -5,7 +5,7 @@
 * Install dependencies
 * Run gulp
 
-```bash # uninstall previous Gulp installation, if any
+``` # uninstall previous Gulp installation, if any
 npm uninstall gulp -g
 cd [your_project_root]
 npm uninstall gulp
@@ -20,7 +20,7 @@ npm install gulpjs/gulp.git#4.0 --save-dev
 gulp -v
 ```
 
-```bash
+```
 npm install -g bower nodemon
 npm install
 bower install
