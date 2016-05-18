@@ -1,0 +1,43 @@
+{
+  "name": "crmovil.com",
+  "authors": [
+    "rubenabix <rubenabix@gmail.com>"
+  ],
+  "description": "Material Project",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Material"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "master",
+    "angular-animate": "master",
+    "angular-aria": "master",
+    "angular-messages": "master",
+    "socket.io-client": "master",
+    "angular-material": "1.0.8",
+    "angular-material-icons": "master",
+    "components-font-awesome": "master",
+    "angular-ui-router": "ui-router#^0.2.18",
+    "ui-router": "1.0.0-alpha.4",
+    "svg-morpheus": "^0.1.8"
+  },
+  "resolutions": {
+    "angular-messages": "^1.4.8",
+    "angular-animate": "^1.4.8",
+    "angular": "master",
+    "angular-aria": "^1.4.8",
+    "angular-ui-router": "~0.2.18",
+    "angular-material": "master"
+  }
+}

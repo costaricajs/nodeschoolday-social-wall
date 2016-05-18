@@ -1,0 +1,25 @@
+{
+  "apps": [
+    {
+      "name": "App",
+      "script": "./src/server/index.js",
+      "args": [
+      ],
+//      "watch": [
+//        "./src/**/*.*"
+//      ],
+      "node_args": "",
+      "log_date_format": "DD-MM-YYYY HH:mm Z",
+      "ignore_watch": [
+        "[\\/\\\\]\\./",
+        "node_modules"
+      ],
+      "instances": 1,
+      "exec_mode": "fork",
+      "autorestart": true,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
