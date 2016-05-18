@@ -65,7 +65,6 @@ function activate(io, options) {
   stream = twitter.stream('statuses/filter', { track: ['javascript', 'nodejs'] });
 
   stream.on('tweet', function (tweet) {
-    console.log(tweet);
     const lightTweet = {
       text: tweet.text
     };

@@ -1,11 +1,14 @@
 'use strict';
 
+const util = require('./util');
+
 const routes = [
   {
     method: 'GET',
     path: '/',
     config: {
       handler(request, reply){
+        
         reply.view('./app/templates/index.pug',
           {
             participants:

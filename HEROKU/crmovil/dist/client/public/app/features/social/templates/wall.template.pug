@@ -15,22 +15,26 @@ div(layout="column")
     .gallery-wall(flex="50")
 
 
-  div(layout-gt-sm="row")
-    md-content(layout="row", layout-wrap="", layout-padding ="", layout-margin ="", layout-align="center center")
+  div(layout="column", layout-align="center center")
+    h1 Participantes
+    md-content(layout="row", layout-wrap="", layout-align="center center")
       div(ng-repeat="(key, prop) in mainController.participants")
-        div(ng-switch="", on="mainController.participants[key].twitter ? 'twitter' : 'github'")
-          img.mm-avatar(ng-switch-when="twitter", ng-src='https://twitter.com/{{mainController.participants[key].twitter}}/profile_image?size=original', height='120px', width='120px', alt='')
-          img.mm-avatar(ng-switch-when="github", ng-src='https://avatars.githubusercontent.com/{{mainController.participants[key].github}}?s=120', height='120px', width='120px', alt='')
-        br
-        h4
-          //b key {{key}} value {{value.name}}
-          b {{mainController.participants[key].name}}
-        p(layout="row", layout-align="center center")
-          a(ng-if="mainController.participants[key].website", target='_blank', ng-href='{{mainController.participants[key].website}}')
-            ng-md-icon(icon="create", size="24", style="fill: #337ab7")
-          a(ng-if="mainController.participants[key].twitter", target='_blank', ng-href='http://twitter.com/{{mainController.participants[key].twitter}}')
-            ng-md-icon(icon="twitter", size="24", style="fill: #337ab7")
-          a(ng-if="mainController.participants[key].github", target='_blank', ng-href='http://github.com/{{mainController.participants[key].github}}')
-            ng-md-icon(icon="github-circle", size="24", style="fill: #337ab7")
-        br
-        br
+        div(ng-switch="", on="mainController.participants[key].github ? 'github' : 'twitter' ")
+          a(ng-switch-when="twitter", target='_blank', ng-href='http://twitter.com/{{mainController.participants[key].twitter}}')
+            img(ng-src='https://twitter.com/{{mainController.participants[key].twitter}}/profile_image?size=original', height='120px', width='120px', alt='')
+          a(ng-switch-when="github", target='_blank', ng-href='http://github.com/{{mainController.participants[key].github}}')
+            img(ng-src='https://avatars.githubusercontent.com/{{mainController.participants[key].github}}?s=120', height='120px', width='120px', alt='')
+    div(flex="5")
+        //br
+        //h4
+        //  //b key {{key}} value {{value.name}}
+        //  b {{mainController.participants[key].name}}
+        //p(layout="row", layout-align="center center")
+        //  a(ng-if="mainController.participants[key].website", target='_blank', ng-href='{{mainController.participants[key].website}}')
+        //    ng-md-icon(icon="create", size="24", style="fill: #337ab7")
+        //  a(ng-if="mainController.participants[key].twitter", target='_blank', ng-href='http://twitter.com/{{mainController.participants[key].twitter}}')
+        //    ng-md-icon(icon="twitter", size="24", style="fill: #337ab7")
+        //  a(ng-if="mainController.participants[key].github", target='_blank', ng-href='http://github.com/{{mainController.participants[key].github}}')
+        //    ng-md-icon(icon="github-circle", size="24", style="fill: #337ab7")
+        //br
+        //br
