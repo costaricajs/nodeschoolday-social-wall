@@ -5,7 +5,8 @@
 * Install dependencies
 * Run gulp
 
-``` # uninstall previous Gulp installation, if any
+``` 
+# uninstall previous Gulp installation, if any
 npm uninstall gulp -g
 cd [your_project_root]
 npm uninstall gulp
