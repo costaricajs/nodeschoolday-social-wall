@@ -3,6 +3,7 @@
 
 let notificationsChannel;
 const Twitter = require('twit');
+const request = require('request');
 let stream;
 let twitter;
 let youtubeKey;
@@ -11,20 +12,31 @@ let managers;
 let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
 let youtubeKeywords = hashTags.join('|');
 
-function setupInstagramSubscriptions(options){
+const api = 'https://api.instagram.com/v1/subscriptions';
+
+function setupInstagramSubscriptions(options) {
+
   const params = {
     client_id: options.client_id,
     client_secret: options.client_secret,
     verify_token: options.verify_token,
-    object: "tag",
-    aspect: "media",
+    object: 'tag',
+    aspect: 'media',
     callback_url: options.base + '/publish/photo'
   };
 
-  request.post({url: api + "subscriptions", form: params},
-    function(err, response, body) {
-      if (err) console.log("Failed to subscribe:", err);
-      else console.log("Successfully subscribed.");
+  request.post(
+    {
+      url: api + '/subscriptions',
+      form: params
+    },
+    (err, response, body) => {
+      if (err) {
+        console.log('Failed to subscribe:', err);
+      }
+      else {
+        console.log('Successfully subscribed.');
+      }
     });
 }
 
@@ -99,6 +111,8 @@ function activate(utils, options) {
 
   fetchYoutube();
   setInterval(fetchYoutube, 1000 * 60 * 10);
+
+  setupInstagramSubscriptions(options.instagram);
 
 }
 

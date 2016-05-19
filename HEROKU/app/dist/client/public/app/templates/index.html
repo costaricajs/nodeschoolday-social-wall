@@ -1,9 +1,34 @@
-<html lang="en" ng-app="app" layout-fill=""><head><meta name="viewport" content="width=device-width,initial-scale=1"><style>.ng-hide {
-  display: none !important;
-}
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none !important;
-}</style><link rel="stylesheet" href="dist/public/allLibApp-447cf2c7f7.css" inline=""><link rel="stylesheet" href="dist/public/allApp-117f227767.css" inline=""></head><script>var participants = ;
-
-window.participants = participants;</script><body layout="column" ng-cloak="" ng-controller="MainController as mainController" ng-show="::mainController.isReady" layout-fill=""><div flex="" layout="row"><md-content flex=""><div ui-view="" layout="column" ng-show="::mainController.isReady" ng-cloak=""></div></md-content></div><script src="dist/public/allLibApp-639621dd44.js" inline=""></script><script src="dist/public/allApp-484de036f7.js" inline=""></script></body></html>
+<html lang="en" ng-app="app" layout-fill="">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      .ng-hide {
+        display: none !important;
+      }
+      
+      [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+        display: none !important;
+      }
+      
+    </style>
+    <link rel="stylesheet" href="dist/public/allLibApp-447cf2c7f7.css" inline=""/>
+    <link rel="stylesheet" href="dist/public/allApp-117f227767.css" inline=""/>
+  </head>
+  <script>var participants = ;
+    
+    window.participants = participants;
+    
+  </script>
+  <body layout="column" ng-cloak="" ng-controller="MainController as mainController" ng-show="::mainController.isReady" layout-fill="">
+    <!--include layout/toolbar-->
+    <div flex="" layout="row">
+      <!--include layout/sidenav-->
+      <md-content flex="">
+        <div ui-view="" layout="column" ng-show="::mainController.isReady" ng-cloak=""></div>
+      </md-content>
+    </div>
+    <script src="dist/public/allLibApp-639621dd44.js" inline=""></script>
+    <script src="dist/public/allApp-484de036f7.js" inline=""></script>
+  </body>
+</html>
