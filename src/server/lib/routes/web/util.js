@@ -2,7 +2,8 @@
 
 const request = require('request');
 
-const participantsUrl = 'https://raw.githubusercontent.com/CostaRicaJS/nodeschool-mentors-2016/master/mentors-data.json';
+const participantsUrl = process.env.PARTICIPANTS_URL ||
+  'https://raw.githubusercontent.com/CostaRicaJS/nodeschool-mentors-2016/master/mentors-data.json';
 
 function getParticipants() {
   return new Promise((resolve, reject)=> {

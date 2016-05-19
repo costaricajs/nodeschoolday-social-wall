@@ -1,7 +1,8 @@
 'use strict';
 
 const hoek = require('hoek');
-let redis = require('redis');
+const google = require('googleapis');
+
 let util = require('./util.js');
 let channels = require('./channels');
 let io;

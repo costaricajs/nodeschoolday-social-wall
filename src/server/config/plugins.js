@@ -55,10 +55,14 @@ var plugins = [
     register: require('./../lib/plugins/stream/index'),
     options: {
       'twitter': {
-        'consumer_key': 'z7CzhqNUaMlw96UrNYH0ARqLO',
-        'consumer_secret': 'q8QoEfj2HIdrDrUskUJV1Hw4FvpP7UObuoOhLLvEBwY3HxzFeO',
-        'access_token': '3265582838-iEeDYZZPWjHz0tZsUlME9v0lGDCMHeUWiARakif',
-        'access_token_secret': 'iC2TfpCIUMazS9jE1YBOFMrQq8MGkhDbzvwTpo11BX2aX'
+        'consumer_key': process.env.TWITTER_CONSUMER_KEY ||
+        'z7CzhqNUaMlw96UrNYH0ARqLO',
+        'consumer_secret': process.env.TWITTER_CONSUMER_SECRET ||
+        'q8QoEfj2HIdrDrUskUJV1Hw4FvpP7UObuoOhLLvEBwY3HxzFeO',
+        'access_token': process.env.TWITTER_ACCESS_TOKEN ||
+        '3265582838-iEeDYZZPWjHz0tZsUlME9v0lGDCMHeUWiARakif',
+        'access_token_secret': process.env.TWITTER_ACCESS_TOKEN_SECRET ||
+        'iC2TfpCIUMazS9jE1YBOFMrQq8MGkhDbzvwTpo11BX2aX'
       }
     }
   }
