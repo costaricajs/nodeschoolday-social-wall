@@ -13,7 +13,7 @@ var config = {
   ],
 
   allDistFiles: ['./dist/**/*'],
-  herokuConfig: ['./package.json'],
+  herokuConfig: ['./package.json', './Procfile'],
 
   indexHTML: './src/client/public/app/templates/index.html',
   scriptsDestination: './src/client/public/app/templates/layout/scripts.pug',

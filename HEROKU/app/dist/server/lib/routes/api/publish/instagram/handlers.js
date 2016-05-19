@@ -3,23 +3,18 @@
 const util = require('./util');
 
 const Boom = require('boom');
-const _ = require('lodash');
 
-function uploadImages(request, reply) {
+function publish(request, reply) {
 
   let options = {
     buffer: {},
-    input: {
-      files: request.payload
-    },
+    input: request.params,
     request,
     reply,
     result: {}
   };
 
-  Object.assign(options.input, request.query);
-
-  util.uploadImages(options)
+  util.publish(options)
     .then(onSuccess)
     .catch(onError);
 
@@ -33,8 +28,6 @@ function onError(options) {
   options.reply(Boom.expectationFailed('Expected this to work', options.error || {}));
 }
 
-const handlers = {
-  uploadImages
+module.exports = {
+  publish
 };
-
-module.exports = handlers;
