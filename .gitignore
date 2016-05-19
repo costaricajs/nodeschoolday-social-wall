@@ -1,11 +1,4 @@
-# Ignore Visual Studio  Project #
-###################
-*.user
-*.gpState
-*.suo
-bin
-obj
-/packages
+HEROKU/app/dist
 
 # Ignore Node & Bower
 ###################
@@ -69,10 +62,4 @@ journal
 ehthumbs.db
 Icon?
 Thumbs.db
-
-/gulp
-gulp
-
-/src/client/public/app/**/*.js
-
 .idea
