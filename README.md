@@ -1,12 +1,3 @@
-# nodeschoolday-social-wall
-
-
-
-  - Install node >= 6.x
-  - Install gulp, bower, nodemon, pug
-  - Install dependencies
-  - Run gulp
-
 ```sh
 # uninstall previous Gulp installation, if any
 npm uninstall gulp -g
@@ -24,3 +15,15 @@ bower install
 # run the project
 gulp
 ```
+
+## Deploy
+
+```sh
+gulp buildHeroku
+```
+
+Use ./HEROKU/app/
+ 
+#### Config Variables (process.env)
+
+MODE = production

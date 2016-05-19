@@ -70,9 +70,7 @@ function activate(io, options) {
     };
     notificationsChannel.emit('tweet', tweet);
   });
-
-
-
+  
 }
 
 const channels = {

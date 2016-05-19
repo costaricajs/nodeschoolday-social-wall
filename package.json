@@ -73,6 +73,7 @@
     "gcloud": "^0.30.3",
     "good": "^6.4.0",
     "good-console": "^5.2.0",
+    "googleapis": "^7.0.0",
     "hapi": "^13.3.0",
     "hapi-agenda": "^0.9.1",
     "hapi-auth-cookie": "^6.1.1",
