@@ -14,7 +14,7 @@ function watch() {
 
 gulp.task('watch', watch);
 
-gulp.task('dev', gulp.series('cleanBuild', 'styles', 'compile', 'cleanHtmlFiles', 'inject', 'compileTemplates', 'templateCache', gulp.parallel('dev-server', 'watch')));
+gulp.task('dev', gulp.series('cleanBuild', 'styles', 'compile', 'cleanHtmlFiles', 'compileTemplates', 'templateCache', 'inject', gulp.parallel('dev-server', 'watch')));
 
 gulp.task('build', gulp.series('compile', 'styles', 'cleanBuild', 'cleanHtmlFiles', 'concat','injectBuild', 'compileTemplatesAndOptimize', 'templateCache', 'copy'));
 
