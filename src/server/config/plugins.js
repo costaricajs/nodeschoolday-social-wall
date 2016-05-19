@@ -69,6 +69,12 @@ var plugins = [
         'auth': {
           'key': process.env.YOUTUBE_KEY || 'AIzaSyCGP7brw06_AaXAfT1NTYZevh11ZG5buGw'
         }
+      },
+      'instagram': {
+        client_id: '36214acc2b344e78b7b1d971faf518e5',
+        client_secret: '3b8a5bc6eab6426fb1d9207188f28d93',
+        verify_token: process.env.APP_SECRET || 'nodeschooldaycr16',
+        base: process.env.BASE_URL || 'http://nodeschool-costarica.herokuapp.com'
       }
     }
   }
