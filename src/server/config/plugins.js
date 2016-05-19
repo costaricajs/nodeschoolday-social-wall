@@ -67,7 +67,7 @@ var plugins = [
       'youtube': {
         'version': 'v3',
         'auth': {
-          'key': 'AIzaSyCGP7brw06_AaXAfT1NTYZevh11ZG5buGw'
+          'key': process.env.YOUTUBE_KEY || 'AIzaSyCGP7brw06_AaXAfT1NTYZevh11ZG5buGw'
         }
       }
     }
