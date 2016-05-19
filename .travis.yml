@@ -1,10 +1,13 @@
 language: node_js
 node_js:
 - 4.4.1
+before_script:
+  - npm i -g gulpjs/gulp-cli bower pug stylus
+  - bower install
 script:
-- "./bin/deploy.sh"
+  - "./bin/deploy.sh"
 before_deploy:
-- chmod +x ./bin/deploy.sh
+  - chmod +x ./bin/deploy.sh
 cache:
   directories:
     - node_modules
