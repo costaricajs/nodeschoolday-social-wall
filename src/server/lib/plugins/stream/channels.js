@@ -5,6 +5,11 @@ let notificationsChannel;
 const Twitter = require('twit');
 let stream;
 let twitter;
+let youtubeKey;
+let managers;
+
+let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
+let youtubeKeywords = hashTags.join('|');
 
 function setupNotificationsChannel() {
 
@@ -53,16 +58,18 @@ function setupNotificationsChannel() {
   });
 }
 
-function activate(io, options) {
+function activate(utils, options) {
 
-  notificationsChannel = io.of('/notifications');
+  managers = utils;
+
+  notificationsChannel = managers.io.of('/notifications');
 
   setupNotificationsChannel();
 
   twitter = new Twitter(options.twitter);
 
   //stream = twitter.stream('statuses/filter', { track: 'mario' });
-  stream = twitter.stream('statuses/filter', { track: ['javascript', 'nodejs'] });
+  stream = twitter.stream('statuses/filter', {track: hashTags});
 
   stream.on('tweet', function (tweet) {
     const lightTweet = {
@@ -70,7 +77,29 @@ function activate(io, options) {
     };
     notificationsChannel.emit('tweet', tweet);
   });
-  
+
+  youtubeKey = options.youtube.auth.key;
+
+  fetchYoutube();
+  setInterval(fetchYoutube, 1000 * 60 * 10);
+
+}
+
+function fetchYoutube() {
+
+  managers.youtube.search.list({
+    part: 'id,snippet',
+    q: youtubeKeywords,
+    key: youtubeKey
+  }, function (err, data) {
+    if (err) {
+      console.error('Error: ' + err);
+    } else {
+      console.log('youtube fetch');
+      notificationsChannel.emit('youtube', data);
+    }
+
+  });
 }
 
 const channels = {

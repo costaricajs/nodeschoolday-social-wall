@@ -15,7 +15,7 @@ var plugins = [
     register: require('hapi-swagger'),
     options: {
       'info': {
-        'title': 'CR Autos',
+        'title': 'nodeschoolday-social-wall',
         'version': '0.0.1',
         'contact': {
           'name': 'RiX',
@@ -63,6 +63,12 @@ var plugins = [
         '3265582838-iEeDYZZPWjHz0tZsUlME9v0lGDCMHeUWiARakif',
         'access_token_secret': process.env.TWITTER_ACCESS_TOKEN_SECRET ||
         'iC2TfpCIUMazS9jE1YBOFMrQq8MGkhDbzvwTpo11BX2aX'
+      },
+      'youtube': {
+        'version': 'v3',
+        'auth': {
+          'key': 'AIzaSyCGP7brw06_AaXAfT1NTYZevh11ZG5buGw'
+        }
       }
     }
   }
