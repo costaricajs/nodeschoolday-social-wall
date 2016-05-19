@@ -28,9 +28,13 @@ gulp
 ## Deploy
 
 ```sh
- gulp buildHeroku
- ```
+gulp buildHeroku
+```
+
+Use content from ./HEROKU/app/
  
 #### Config Variables (process.env)
 
 MODE = production
+
+ 
