@@ -1,8 +1,8 @@
+
 <div layout="column">
   <div id="socialfeeds" layout-gt-sm="row">
     <md-content flex="" layout="column" layout-align="center" style="height: 69vh">
-      <md-content class="tweets-wall" layout="column" flex="" layout-wrap="" layout-padding="" layout-margin=""
-                  style="display: block">
+      <md-content class="tweets-wall" layout="column" flex="" layout-wrap="" layout-padding="" layout-margin="" style="display: block">
         <md-card ng-repeat="tweet in wallController.tweets | limitTo: 50">
           <div class="media"><img class="media-figure" ng-src="{{tweet.user.profile_image_url}}"/>
             <p class="media-body">{{tweet.text}}</p>
@@ -17,14 +17,7 @@
     <h1>Participantes</h1>
     <md-content layout="row" layout-wrap="" layout-align="center center">
       <div ng-repeat="(key, prop) in mainController.participants">
-        <div ng-switch="" on="mainController.participants[key].github ? 'github' : 'twitter' "><a
-          ng-switch-when="twitter" target="_blank"
-          ng-href="http://twitter.com/{{mainController.participants[key].twitter}}"><img
-          ng-src="https://twitter.com/{{mainController.participants[key].twitter}}/profile_image?size=original"
-          height="120px" width="120px" alt=""/></a><a ng-switch-when="github" target="_blank"
-                                                      ng-href="http://github.com/{{mainController.participants[key].github}}"><img
-          ng-src="https://avatars.githubusercontent.com/{{mainController.participants[key].github}}?s=120"
-          height="120px" width="120px" alt=""/></a></div>
+        <div ng-switch="" on="mainController.participants[key].github ? 'github' : 'twitter' "><a ng-switch-when="twitter" target="_blank" ng-href="http://twitter.com/{{mainController.participants[key].twitter}}"><img ng-src="https://twitter.com/{{mainController.participants[key].twitter}}/profile_image?size=original" height="120px" width="120px" alt=""/></a><a ng-switch-when="github" target="_blank" ng-href="http://github.com/{{mainController.participants[key].github}}"><img ng-src="https://avatars.githubusercontent.com/{{mainController.participants[key].github}}?s=120" height="120px" width="120px" alt=""/></a></div>
       </div>
     </md-content>
   </div>
@@ -32,25 +25,16 @@
     <p>No podríamos tener eventos Nodeschool aquí en Costa Rica sin la ayuda de estupendos patrocinadores:</p>
     <div class="row">
       <div class="col-md-12 centered">
-        <h2>Patrocinadores Platinum</h2><img class="img img-sponsors"
-                                             src="http://nodeschool.io/costarica/images/sponsors/gorilla-logic.png"/><img
-        class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/edify.png"/>
+        <h2>Patrocinadores Platinum</h2><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/gorilla-logic.png"/><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/edify.png"/>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12">
         <div class="col-md-6 centered">
-          <h2>Patrocinadores Oro</h2><img class="img img-sponsors"
-                                          src="http://nodeschool.io/costarica/images/sponsors/gap.png"/><img
-          class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/avantica.png"/>
+          <h2>Patrocinadores Oro</h2><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/gap.png"/><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/avantica.png"/>
         </div>
         <div class="col-md-6 centered">
-          <h2>Patrocinadores Plata</h2><img class="img img-sponsors"
-                                            src="http://nodeschool.io/costarica/images/sponsors/outer-space-coders.png"/><img
-          class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/la404.png"/><img
-          class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/18techs.png"/><img
-          class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/salsamobi.png"/><img
-          class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/brainstation.png"/>
+          <h2>Patrocinadores Plata</h2><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/outer-space-coders.png"/><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/la404.png"/><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/18techs.png"/><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/salsamobi.png"/><img class="img img-sponsors" src="http://nodeschool.io/costarica/images/sponsors/brainstation.png"/>
         </div>
       </div>
     </div>
@@ -60,17 +44,11 @@
       <section class="row white questions">
         <div class="col-md-12"><br/>
           <h3>Nodeschool Costa Rica</h3>
-          <p>Nodeschool Costa Rica es parte del esfuerzo global para enseñar voluntariamente Node.js y JavaScript a
-            todos a través de talleres presenciales utilizando módulos interactivos que te ayudan a aprender o mejorar,
-            escribiendo código y resolviendo problemas con la ayuda de mentores.</p>
-          <p>Más información en&nbsp;<a target="_blank"
-                                        href="http://nodeschool.io/costarica">nodeschool.io/costarica</a></p>
+          <p>Nodeschool Costa Rica es parte del esfuerzo global para enseñar voluntariamente Node.js y JavaScript a todos a través de talleres presenciales utilizando módulos interactivos que te ayudan a aprender o mejorar, escribiendo código y resolviendo problemas con la ayuda de mentores.</p>
+          <p>Más información en&nbsp;<a target="_blank" href="http://nodeschool.io/costarica">nodeschool.io/costarica</a></p>
           <script async="" defer="" src="http://slack.costaricajs.co/slackin.js?large"></script>
         </div>
-        <p class="copy" style="font-size:10px; text-align:right; margin:0; padding-right:40px; padding-bottom:10px">
-          desarrollado por&nbsp;<a target="_blank" href="http://rubenabix.com" alt="Rubén Abarca: Javascript Developer">Rubén
-          Abarca</a>&nbsp;y&nbsp;<a target="_blank" href="http://gaboesquivel.com"
-                                    alt="Gabo Esquivel: Javascript Developer">Gabo Esquivel</a>. © 2016 CostaRicaJS</p>
+        <p class="copy" style="font-size:10px; text-align:right; margin:0; padding-right:40px; padding-bottom:10px">desarrollado por&nbsp;<a target="_blank" href="http://rubenabix.com" alt="Rubén Abarca: Javascript Developer">Rubén Abarca</a>&nbsp;y&nbsp;<a target="_blank" href="http://gaboesquivel.com" alt="Gabo Esquivel: Javascript Developer">Gabo Esquivel</a>. © 2016 CostaRicaJS</p>
       </section>
     </div>
     <!-- div(flex="5")

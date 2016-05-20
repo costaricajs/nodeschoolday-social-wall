@@ -18,15 +18,8 @@ function subscribe(options) {
     console.log('options.request.query');
     console.log(options.request.query);
 
-
-    if (options.input['hub.verify_token'] === verifyToken) {
-      options.result = options.input['hub.challenge'];
-      resolve(options);
-    } else {
-      options.error = 'Verify token incorrect';
-      reject(options);
-    }
-
+    options.result = options.input['hub.challenge'];
+    resolve(options);
 
   });
 }
