@@ -5,7 +5,8 @@
   "main": "\"\"",
   "scripts": {
     "test": "echo \"Error: no test specified\" ",
-    "build-heroku": "gulp buildHeroku"
+    "build-heroku": "gulp buildHeroku",
+    "start": "gulp"
   },
   "engines": {
     "node": ">=6.0.x",
