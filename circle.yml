@@ -1,0 +1,20 @@
+machine:
+  node:
+    version: v6.2.0
+dependencies:
+  pre:
+    - npm i -g gulpjs/gulp-cli bower pug stylus
+  override:
+    - npm install
+    - bower install
+  cache_directories:
+    - node_modules
+    - bower_components
+# test:
+#   override:
+#     - gulp eslint
+deployment:
+  development:
+    branch: master
+    commands:
+      - ./bin/deploy.sh

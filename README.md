@@ -1,5 +1,7 @@
 # nodeschoolday-social-wall
 
+CI Build Status [![Circle CI](https://circleci.com/gh/CostaRicaJS/nodeschoolday-social-wall/tree/master.svg?style=svg&circle-token=3f84eb5ac673dff7cb9ee2b31b209bf69df45d01)](https://circleci.com/gh/CostaRicaJS/nodeschoolday-social-wall/tree/master)  
+
 ## Quick start
 
   - Install node >= 6.x
@@ -32,7 +34,7 @@ gulp buildHeroku
 ```
 
 Use content from ./HEROKU/app/
- 
+
 #### Config Variables (process.env)
 
 MODE = 'production'
