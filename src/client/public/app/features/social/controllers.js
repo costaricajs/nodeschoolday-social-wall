@@ -53,7 +53,6 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         var _vm$instagrams2;
 
         (_vm$instagrams2 = vm.instagrams).unshift.apply(_vm$instagrams2, _toConsumableArray(response.data));
-        $scope.$apply();
       });
     }
 

@@ -28,6 +28,19 @@ var routes = [
       validate: {},
       handler: handlers.publish
     }
+  },
+  {
+    method: 'GET',
+    path: '/api/' + constants.currentVersion + '/instagram/photos',
+    config: {
+      auth: false,
+      plugins: {},
+      description: 'Publish a photo',
+      notes: ['Publish a photo'],
+      tags: ['api', 'instagram', 'public', 'publish'],
+      validate: {},
+      handler: handlers.getPhotos
+    }
   }
 ];
 

@@ -42,6 +42,26 @@ function publish(request, reply) {
 
 }
 
+function getPhotos(request, reply) {
+
+  let options = {
+    buffer: {},
+    input: request.query,
+    request,
+    reply,
+    result: {
+      status: 'ok'
+    }
+  };
+
+  console.log('getPhotos');
+
+  util.getPhotos(options)
+    .then(onSuccess)
+    .catch(onError);
+
+}
+
 function onSuccess(options) {
   options.reply(options.result);
 }
@@ -52,5 +72,6 @@ function onError(options) {
 
 module.exports = {
   publish,
-  subscribe
+  subscribe,
+  getPhotos
 };

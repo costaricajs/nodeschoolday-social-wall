@@ -48,7 +48,6 @@
       socialFactory.getInstagramPictures()
         .then((response)=> {
           vm.instagrams.unshift(...response.data);
-          $scope.$apply();
         });
 
     }

@@ -7,6 +7,12 @@ let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javasc
 
 function publish(options) {
 
+  return getPhotos(options);
+
+}
+
+function getPhotos(options) {
+
   return new Promise((resolve, reject)=> {
 
     const instagram = options.request.server.plugins['stream'].instagram;
@@ -23,10 +29,11 @@ function publish(options) {
           const notificationsChannel = options.request.server.plugins['stream'].notificationsChannel;
           notificationsChannel.emit('instagram-picture', result);
           options.result = result;
-          
+
         }
 
         resolve(options);
+
       });
 
   });
@@ -54,5 +61,6 @@ function subscribe(options) {
 // Public
 module.exports = {
   publish,
-  subscribe
+  subscribe,
+  getPhotos
 };
