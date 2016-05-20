@@ -34,9 +34,9 @@ function publish(request, reply) {
 
   console.log('publish');
 
-  util.publish(options);
-
-  onSuccess(options);
+  util.publish(options)
+    .then(onSuccess)
+    .catch(onError);
 
 }
 

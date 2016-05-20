@@ -1,5 +1,6 @@
 'use strict';
 
+const version = 'v3';
 
 let notificationsChannel;
 const Twitter = require('twit');
@@ -22,8 +23,8 @@ function setupInstagramSubscriptions(options, server) {
   });
 
   instagram.add_tag_subscription(
-    'love',
-    'http://nodeschooldaycr16.costaricajs.co/api/v2/publish/photo',
+    hashTags[0],
+    'http://nodeschooldaycr16.costaricajs.co/api/' + version + '/publish/photo',
     {
       verify_token: options.verify_token
     },
