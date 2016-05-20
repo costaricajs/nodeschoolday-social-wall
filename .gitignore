@@ -1,4 +1,5 @@
 HEROKU/app/dist
+__docs
 
 # Ignore Node & Bower
 ###################
