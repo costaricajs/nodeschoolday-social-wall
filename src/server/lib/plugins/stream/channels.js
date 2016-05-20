@@ -12,33 +12,15 @@ let managers;
 let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
 let youtubeKeywords = hashTags.join('|');
 
-const api = 'https://api.instagram.com/v1/subscriptions/';
+let instagram = require('instagram-node').instagram();
 
 function setupInstagramSubscriptions(options) {
 
-  const params = {
+  instagram.use({
     client_id: options.client_id,
-    client_secret: options.client_secret,
-    verify_token: options.verify_token,
-    object: 'tag',
-    aspect: 'media',
-    object_id: hashTags[0],
-    callback_url: options.base + '/publish/photo'
-  };
+    client_secret: options.client_secret
+  });
 
-  request.post(
-    {
-      url: api,
-      form: params
-    },
-    (err, response, body) => {
-      if (err) {
-        console.log('Failed to subscribe:', err);
-      }
-      else {
-        console.log('Successfully subscribed.');
-      }
-    });
 }
 
 function setupNotificationsChannel() {
@@ -111,7 +93,7 @@ function activate(utils, options) {
   youtubeKey = options.youtube.auth.key;
 
   fetchYoutube();
-  setInterval(fetchYoutube, 1000 * 60 * 10);
+  //setInterval(fetchYoutube, 1000 * 60 * 10);
 
   setupInstagramSubscriptions(options.instagram);
 

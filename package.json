@@ -86,6 +86,7 @@
     "hapi-swagger": "^5.0.1",
     "hoek": "^3.0.4",
     "inert": "^3.2.0",
+    "instagram-node": "^0.5.8",
     "ioredis": "^1.14.0",
     "ip": "^1.1.0",
     "joi": "^8.0.5",
