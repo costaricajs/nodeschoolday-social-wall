@@ -38,6 +38,8 @@
       console.log('Activate: ', 'WallController!!!');
     }
 
+    //$scope
+
     ////////////////
 
     activate();

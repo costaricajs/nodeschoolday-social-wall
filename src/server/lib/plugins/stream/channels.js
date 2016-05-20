@@ -28,11 +28,15 @@ function setupInstagramSubscriptions(options, server) {
     {
       verify_token: options.verify_token
     },
-    (err, result, remaining, limit) => {
-      console.log(err);
-      console.log(result);
+    (error, result, remaining, limit) => {
+
+
+      if (error){
+        console.log(error.error_message);
+      }
 
       instagram.subscriptions(function (err, subscriptions, remaining, limit) {
+        console.log('subscriptions');
         console.log(subscriptions);
       });
 

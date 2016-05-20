@@ -37,6 +37,8 @@
     function activate() {
       console.log('Activate: ', 'WallController!!!');
     }
+    
+    //$scope
 
     ////////////////
 

@@ -7,18 +7,20 @@ let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javasc
 
 function publish(options) {
 
-  return new Promise((resolve, reject)=>{
+  return new Promise((resolve, reject)=> {
 
     const instagram = options.request.server.plugins['stream'].instagram;
 
     console.log('options.input', options.input);
 
     instagram.tag_media_recent(hashTags[0],
-      (err, result, remaining, limit) => {
+      (error, result, remaining, limit) => {
 
-        options.result = {
-          err, result, remaining, limit
-        };
+        if (error) {
+          console.log(error);
+        } else {
+          options.result = result;
+        }
 
         resolve(options);
       });
@@ -28,6 +30,20 @@ function publish(options) {
 }
 
 function subscribe(options) {
+
+  return new Promise((resolve, reject)=> {
+
+    console.log(options.request.query);
+
+    if (options.input['hub.verify_token'] === verifyToken) {
+      options.result = options.input['hub.challenge'];
+      resolve(options);
+    } else {
+      options.error = 'Verify token incorrect';
+      reject(options);
+    }
+
+  });
 
 }
 

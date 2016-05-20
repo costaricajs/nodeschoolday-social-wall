@@ -1,23 +1,37 @@
 div(layout="column")
   div#socialfeeds(layout-gt-sm="row")
-    md-content(flex="", layout="column", layout-align="center", style="height: 69vh;")
-      md-content.tweets-wall(layout="column", flex="", layout-wrap="", layout-padding ="", layout-margin ="", style="display: block;")
-        md-card(ng-repeat='tweet in wallController.tweets | limitTo: 50')
-          .media
-            img.media-figure(ng-src='{{tweet.user.profile_image_url}}')
-            p.media-body
-              | {{tweet.text}}
+    .gallery-wall(flex="")
+      md-content(flex="", layout="column", layout-align="center", style="height: 69vh;")
+        md-content.tweets-wall(layout="column", flex="", layout-wrap="", layout-padding ="", layout-margin ="", style="display: block;")
+          md-tabs(md-dynamic-height='', md-border-bottom='')
+            md-tab(label='twitter')
+              md-content.md-padding(layout-gt-sm="row", flex="", layout-wrap="", layout-align="center center")
+                md-card(ng-repeat='tweet in wallController.tweets | limitTo: 50', flex-gt-sm="30")
+                  .media
+                    img.media-figure(ng-src='{{tweet.user.profile_image_url}}')
+                    p.media-body
+                      | {{tweet.text}}
 
-          //md-card-header
-          //- md-card-avatar
-          //-   img.md-user-avatar
-          //-   //- md-card-header-text
-          //-   //-   span.md-title {{tweet.user.name}}
-          //-   //-   span.md-subhead @{{tweet.user.screen_name}}
-          //- md-card-content
-          //-   p
-          //-     | {{tweet.text}}
-    .gallery-wall(flex="50")
+            md-tab(label='instagram')
+              md-content.md-padding
+                h1.md-display-2 instagram
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.
+                p
+                  | Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.
+                p
+                  | Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.
+            md-tab(label='facebook')
+              md-content.md-padding
+                h1.md-display-2 facebook
+                p
+                  | Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.
+
+            md-tab(label='youtube')
+              md-content.md-padding
+                h1.md-display-2 youtube
+                p
+                  | Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.
 
 
   div#participantes.bg-yellow(layout="column", layout-align="center center")
