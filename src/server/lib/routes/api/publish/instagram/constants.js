@@ -1,7 +1,7 @@
 'use strict';
 
 var constants = {
-  currentVersion: 'v1'
+  currentVersion: 'v2'
 };
 
 module.exports = constants;

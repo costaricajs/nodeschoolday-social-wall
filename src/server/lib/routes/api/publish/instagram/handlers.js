@@ -14,11 +14,9 @@ function subscribe(request, reply) {
     result: {}
   };
 
-  console.log('subscribe');
+  console.log('subscribe', request.query);
 
-  util.subscribe(options)
-    .then(onSuccess)
-    .catch(onError);
+  reply(request.query['hub.challenge']);
 
 }
 

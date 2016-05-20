@@ -21,28 +21,22 @@ function setupInstagramSubscriptions(options, server) {
     client_secret: options.client_secret
   });
 
-  setTimeout(()=> {
+  instagram.add_tag_subscription(
+    'love',
+    'http://nodeschooldaycr16.costaricajs.co/api/v2/publish/photo',
+    {
+      verify_token: options.verify_token
+    },
+    (err, result, remaining, limit) => {
+      console.log(err);
+      console.log(result);
 
-    const tag = hashTags[0];
+      instagram.subscriptions(function (err, subscriptions, remaining, limit) {
+        console.log(subscriptions);
+      });
 
-    instagram.add_tag_subscription(
-      'love',
-      'http://nodeschooldaycr16.costaricajs.co/api/v1/publish/photo',
-      {
-        verify_token: options.verify_token
-      },
-      (err, result, remaining, limit) => {
-        console.log(err);
-        console.log(result);
-
-        instagram.subscriptions(function (err, subscriptions, remaining, limit) {
-          console.log(subscriptions);
-        });
-
-      }
-    );
-
-  }, 5000);
+    }
+  );
 
   server.expose('instagram', instagram);
 

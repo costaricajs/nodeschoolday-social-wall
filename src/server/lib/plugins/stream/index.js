@@ -46,7 +46,7 @@ function start(done) {
 }
 
 exports.register.attributes = {
-  name: 'hapi-socket-manager',
+  name: 'stream',
   multiple: false,
   version: '1.0.0'
 };
