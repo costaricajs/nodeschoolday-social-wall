@@ -14,6 +14,8 @@ function publish(request, reply) {
     result: {}
   };
 
+  console.log('publish');
+
   util.publish(options)
     .then(onSuccess)
     .catch(onError);

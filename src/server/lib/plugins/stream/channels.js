@@ -12,7 +12,7 @@ let managers;
 let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
 let youtubeKeywords = hashTags.join('|');
 
-const api = 'https://api.instagram.com/v1/subscriptions';
+const api = 'https://api.instagram.com/v1/subscriptions/';
 
 function setupInstagramSubscriptions(options) {
 
@@ -22,12 +22,13 @@ function setupInstagramSubscriptions(options) {
     verify_token: options.verify_token,
     object: 'tag',
     aspect: 'media',
+    object_id: hashTags[0],
     callback_url: options.base + '/publish/photo'
   };
 
   request.post(
     {
-      url: api + '/subscriptions',
+      url: api,
       form: params
     },
     (err, response, body) => {
