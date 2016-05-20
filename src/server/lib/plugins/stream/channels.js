@@ -47,7 +47,9 @@ function setupInstagramSubscriptions(options, server) {
 
 }
 
-function setupNotificationsChannel() {
+function setupNotificationsChannel(server) {
+
+  server.expose('notificationsChannel', notificationsChannel);
 
   notificationsChannel.on('connection', (socket)=> {
 
@@ -100,7 +102,7 @@ function activate(utils, options, server) {
 
   notificationsChannel = managers.io.of('/notifications');
 
-  setupNotificationsChannel();
+  setupNotificationsChannel(server);
 
   twitter = new Twitter(options.twitter);
 

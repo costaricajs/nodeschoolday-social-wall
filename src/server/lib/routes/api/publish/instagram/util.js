@@ -19,7 +19,11 @@ function publish(options) {
         if (error) {
           console.log(error);
         } else {
+
+          const notificationsChannel = options.request.server.plugins['stream'].notificationsChannel;
+          notificationsChannel.emit('instagram-picture', result);
           options.result = result;
+          
         }
 
         resolve(options);
