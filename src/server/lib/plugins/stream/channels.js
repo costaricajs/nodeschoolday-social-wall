@@ -21,6 +21,21 @@ function setupInstagramSubscriptions(options) {
     client_secret: options.client_secret
   });
 
+  const tag = hashTags[0];
+
+  instagram.add_tag_subscription(
+    tag,
+    'http://nodeschooldaycr16.costaricajs.co/api/v1/publish/photo',
+    {},
+    (err, result, remaining, limit) => {
+
+    }
+  );
+
+  instagram.subscriptions(function(err, subscriptions, remaining, limit){
+    console.log(subscriptions);
+  });
+
 }
 
 function setupNotificationsChannel() {

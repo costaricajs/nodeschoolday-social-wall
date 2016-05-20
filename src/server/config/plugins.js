@@ -71,8 +71,8 @@ var plugins = [
         }
       },
       'instagram': {
-        client_id: '36214acc2b344e78b7b1d971faf518e5',
-        client_secret: '3b8a5bc6eab6426fb1d9207188f28d93',
+        client_id: 'bf481134f9074a77acf4f7f45b2ae48c' || '36214acc2b344e78b7b1d971faf518e5',
+        client_secret: 'a4ce35ac14cf4ab9b0ac156404134d09' || '3b8a5bc6eab6426fb1d9207188f28d93',
         verify_token: process.env.APP_SECRET || 'nodeschooldaycr16',
         base: process.env.BASE_URL || 'http://nodeschool-costarica.herokuapp.com'
       }
