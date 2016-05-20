@@ -20,9 +20,6 @@ git add -fA
 git commit --allow-empty -m "Update app from commit $CURRENT_COMMIT"
 git push -f heroku master
 
-# Move back to previous branch.
-git checkout -
-
 echo "Deployed Successfully!"
 
 exit 0
