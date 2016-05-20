@@ -1,6 +1,6 @@
 div(layout="column")
   div#socialfeeds(layout-gt-sm="row")
-    md-content(flex="", layout="column", layout-align="center", style="height: 90vh;")
+    md-content(flex="", layout="column", layout-align="center", style="height: 69vh;")
       md-content.tweets-wall(layout="column", flex="", layout-wrap="", layout-padding ="", layout-margin ="", style="display: block;")
         md-card(ng-repeat='tweet in wallController.tweets | limitTo: 50')
           .media
@@ -20,7 +20,7 @@ div(layout="column")
     .gallery-wall(flex="50")
 
 
-  div#participantes(layout="column", layout-align="center center")
+  div#participantes.bg-yellow(layout="column", layout-align="center center")
     h1 Participantes
     md-content(layout="row", layout-wrap="", layout-align="center center")
       div(ng-repeat="(key, prop) in mainController.participants")
