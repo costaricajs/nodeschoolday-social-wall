@@ -11,7 +11,20 @@ var routes = [
       plugins: {},
       description: 'Publish a photo',
       notes: ['Publish a photo'],
-      tags: ['api', 'instagram', 'public'],
+      tags: ['api', 'instagram', 'public', 'subscribe'],
+      validate: {},
+      handler: handlers.subscribe
+    }
+  },
+  {
+    method: 'POST',
+    path: '/api/' + constants.currentVersion + '/publish/photo',
+    config: {
+      auth: false,
+      plugins: {},
+      description: 'Publish a photo',
+      notes: ['Publish a photo'],
+      tags: ['api', 'instagram', 'public', 'publish'],
       validate: {},
       handler: handlers.publish
     }

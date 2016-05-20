@@ -6,14 +6,16 @@ const verifyToken = process.env.APP_SECRET || 'nodeschooldaycr16';
 
 function publish(options) {
 
+  console.log('options.input', options.input);
+
+}
+
+function subscribe(options) {
+
   return new Promise((resolve, reject)=> {
-    console.log('--------------------------');
-    console.log('options.request.query');
-    console.log(options.request.query);
 
     if (options.input['hub.verify_token'] === verifyToken) {
       options.result = options.input['hub.challenge'];
-      console.log('options.result', options.result, 1);
       resolve(options);
     } else {
       options.error = 'Verify token incorrect';
@@ -26,5 +28,6 @@ function publish(options) {
 
 // Public
 module.exports = {
+  subscribe,
   publish
 };

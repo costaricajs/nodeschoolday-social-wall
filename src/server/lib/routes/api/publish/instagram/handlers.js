@@ -4,7 +4,7 @@ const util = require('./util');
 
 const Boom = require('boom');
 
-function publish(request, reply) {
+function subscribe(request, reply) {
 
   let options = {
     buffer: {},
@@ -14,11 +14,31 @@ function publish(request, reply) {
     result: {}
   };
 
-  console.log('publish');
+  console.log('subscribe');
 
-  util.publish(options)
+  util.subscribe(options)
     .then(onSuccess)
     .catch(onError);
+
+}
+
+function publish(request, reply) {
+
+  let options = {
+    buffer: {},
+    input: request.payload,
+    request,
+    reply,
+    result: {
+      status: 'ok'
+    }
+  };
+
+  console.log('publish');
+
+  util.publish(options);
+
+  onSuccess(options);
 
 }
 
@@ -31,5 +51,6 @@ function onError(options) {
 }
 
 module.exports = {
-  publish
+  publish,
+  subscribe
 };
