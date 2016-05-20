@@ -13,7 +13,7 @@ div(layout="column")
                       | {{tweet.text}}
 
             md-tab(label='instagram')
-              md-content.md-padding(layout-gt-sm="row", flex="", layout-wrap="", layout-align="center center", layout-padding ="", layout-margin ="")
+              md-content.md-padding(layout-gt-sm="row", flex="", layout-wrap="", layout-align="center center")
                 .instagram-pic(ng-repeat='instagram in wallController.instagrams | limitTo: 50', flex-gt-sm="30")
                     a(href='{{instagram.link}}', target='_blank')
                       img.img-responsive(ng-src='{{instagram.images.standard_resolution.url}}')

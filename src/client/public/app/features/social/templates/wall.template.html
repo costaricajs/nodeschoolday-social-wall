@@ -15,7 +15,7 @@
               </md-content>
             </md-tab>
             <md-tab label="instagram">
-              <md-content class="md-padding" layout-gt-sm="row" flex="" layout-wrap="" layout-align="center center" layout-padding="" layout-margin="">
+              <md-content class="md-padding" layout-gt-sm="row" flex="" layout-wrap="" layout-align="center center">
                 <div class="instagram-pic" ng-repeat="instagram in wallController.instagrams | limitTo: 50" flex-gt-sm="30"><a href="{{instagram.link}}" target="_blank"><img class="img-responsive" ng-src="{{instagram.images.standard_resolution.url}}"/></a></div>
               </md-content>
             </md-tab>
