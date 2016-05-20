@@ -1,21 +1,26 @@
 div(layout="column")
-  div(layout-gt-sm="row")
+  div#socialfeeds(layout-gt-sm="row")
     md-content(flex="", layout="column", layout-align="center", style="height: 90vh;")
       md-content.tweets-wall(layout="column", flex="", layout-wrap="", layout-padding ="", layout-margin ="", style="display: block;")
         md-card(ng-repeat='tweet in wallController.tweets | limitTo: 50')
-          md-card-header
-            md-card-avatar()
-              img.md-user-avatar(ng-src='{{tweet.user.profile_image_url}}')
-            md-card-header-text
-              span.md-title {{tweet.user.name}}
-              span.md-subhead @{{tweet.user.screen_name}}
-          md-card-content
-            p
+          .media
+            img.media-figure(ng-src='{{tweet.user.profile_image_url}}')
+            p.media-body
               | {{tweet.text}}
+
+          //md-card-header
+          //- md-card-avatar
+          //-   img.md-user-avatar
+          //-   //- md-card-header-text
+          //-   //-   span.md-title {{tweet.user.name}}
+          //-   //-   span.md-subhead @{{tweet.user.screen_name}}
+          //- md-card-content
+          //-   p
+          //-     | {{tweet.text}}
     .gallery-wall(flex="50")
 
 
-  div(layout="column", layout-align="center center")
+  div#participantes(layout="column", layout-align="center center")
     h1 Participantes
     md-content(layout="row", layout-wrap="", layout-align="center center")
       div(ng-repeat="(key, prop) in mainController.participants")
@@ -24,7 +29,50 @@ div(layout="column")
             img(ng-src='https://twitter.com/{{mainController.participants[key].twitter}}/profile_image?size=original', height='120px', width='120px', alt='')
           a(ng-switch-when="github", target='_blank', ng-href='http://github.com/{{mainController.participants[key].github}}')
             img(ng-src='https://avatars.githubusercontent.com/{{mainController.participants[key].github}}?s=120', height='120px', width='120px', alt='')
-    div(flex="5")
+
+  div#patrocinadores(layout="column", layout-align="center center")
+    p
+      | No podríamos tener eventos Nodeschool aquí en Costa Rica sin la ayuda de estupendos patrocinadores:
+    .row
+      .col-md-12.centered
+        h2 Patrocinadores Platinum
+        img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/gorilla-logic.png')
+        img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/edify.png')
+    .row
+      .col-md-12
+        .col-md-6.centered
+          h2 Patrocinadores Oro
+          img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/gap.png')
+          img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/avantica.png')
+        .col-md-6.centered
+          h2 Patrocinadores Plata
+          img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/outer-space-coders.png')
+          img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/la404.png')
+          img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/18techs.png')
+          img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/salsamobi.png')
+          img.img.img-sponsors(src='http://nodeschool.io/costarica/images/sponsors/brainstation.png')
+
+  .bg-yellow
+    .container
+      section.row.white.questions
+        .col-md-12
+          br
+          h3 Nodeschool Costa Rica
+          p
+            | Nodeschool Costa Rica es parte del esfuerzo global para enseñar voluntariamente Node.js y JavaScript a todos a través de talleres presenciales utilizando módulos interactivos que te ayudan a aprender o mejorar, escribiendo código y resolviendo problemas con la ayuda de mentores.
+          p
+            | Más información en&nbsp;
+            a(target='_blank', href='http://nodeschool.io/costarica') nodeschool.io/costarica
+          script(async='', defer='', src='http://slack.costaricajs.co/slackin.js?large')
+        p.copy(style='font-size:10px; text-align:right; margin:0; padding-right:40px; padding-bottom:10px;')
+          | sitio web desarrollado por&nbsp;
+          a(target='_blank', href='http://www.rubenabix.com', alt='Rubén Abarca: Javascript Developer') Rubén Abarca
+          | &nbsp;y&nbsp;
+          a(target='_blank', href='http://gaboesquivel.com', alt='Gabo Esquivel: Javascript Developer') Gabo Esquivel
+          | . © 2016 CostaRicaJS
+
+
+    // div(flex="5")
         //br
         //h4
         //  //b key {{key}} value {{value.name}}
