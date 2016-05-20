@@ -24,13 +24,13 @@ function setupInstagramSubscriptions(options, server) {
   const tag = hashTags[0];
 
   instagram.add_tag_subscription(
-    tag,
+    'love',
     'http://nodeschooldaycr16.costaricajs.co/api/v1/publish/photo',
     {
       verify_token: options.verify_token
     },
     (err, result, remaining, limit) => {
-
+      console.log(err);
     }
   );
 
