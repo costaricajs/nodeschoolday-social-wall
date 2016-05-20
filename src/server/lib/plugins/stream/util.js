@@ -1,6 +1,5 @@
 'use strict';
 
-const util = {
-};
+const util = {};
 
 module.exports = util;

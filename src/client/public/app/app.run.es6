@@ -8,10 +8,9 @@
   runBlock.$inject = ['$window', '$templateCache', '$http'];
   function runBlock($window, $templateCache, $http) {
 
-    var urls = [
-    ];
+    var urls = [];
 
-    angular.forEach(urls, function(url) {
+    angular.forEach(urls, function (url) {
       $http.get(url, {cache: $templateCache});
     });
 

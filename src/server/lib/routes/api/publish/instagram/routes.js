@@ -1,4 +1,3 @@
-
 const handlers = require('./handlers.js');
 const constants = require('./constants.js');
 const validators = require('./validators');
@@ -6,16 +5,14 @@ const validators = require('./validators');
 var routes = [
   {
     method: 'GET',
-    path: '/api/' + constants.currentVersion +'/publish/photo',
+    path: '/api/' + constants.currentVersion + '/publish/photo',
     config: {
       auth: false,
-      plugins: {
-      },
+      plugins: {},
       description: 'Publish a photo',
       notes: ['Publish a photo'],
       tags: ['api', 'instagram', 'public'],
-      validate: {
-      },
+      validate: {},
       handler: handlers.publish
     }
   }

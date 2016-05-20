@@ -15,7 +15,7 @@ function publish(options) {
 
 
     if (options.input.hub && options.input.hub['verify_token'] === verifyToken) {
-      options.result = options.input.hub['hub.challenge'];
+      options.result = options.input.hub['challenge'];
       resolve(options);
     } else {
       options.error = 'Verify token incorrect';

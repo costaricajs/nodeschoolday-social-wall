@@ -9,8 +9,7 @@
 
   function appFactory($http) {
 
-    var factory = {
-    };
+    var factory = {};
 
     ////////////////
 

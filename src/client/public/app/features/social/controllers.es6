@@ -9,22 +9,21 @@
 
   function WallController($scope, $mdMedia, $mdSidenav, $mdDialog) {
 
-    let tweets = [
-    ];
+    let tweets = [];
 
     /////////////
 
     let vm = this;
     vm.tweets = tweets;
-    let baseUrl =  '';
+    let baseUrl = '';
     let namespace = 'notifications';
     let identification = '';
 
     let notifications = io.connect(baseUrl + '/' + namespace, {secure: true});
 
     notifications.on('identification', function (result) {
-     console.log('identification:', result.id);
-     identification = result.id;
+      console.log('identification:', result.id);
+      identification = result.id;
     });
 
     notifications.on('tweet', function (result) {

@@ -1,4 +1,3 @@
-
 const instagram = require('./instagram/routes');
 
 var routes = [

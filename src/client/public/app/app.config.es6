@@ -19,7 +19,6 @@
     }
 
 
-
     function theme() {
       $mdThemingProvider.theme('default')
         .primaryPalette('teal')

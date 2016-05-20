@@ -31,10 +31,11 @@ function setupInstagramSubscriptions(options, server) {
     },
     (err, result, remaining, limit) => {
       console.log(err);
+      console.log(result);
     }
   );
 
-  instagram.subscriptions(function(err, subscriptions, remaining, limit){
+  instagram.subscriptions(function (err, subscriptions, remaining, limit) {
     console.log(subscriptions);
   });
 

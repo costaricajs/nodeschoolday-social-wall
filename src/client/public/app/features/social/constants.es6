@@ -9,8 +9,7 @@
 
     let api;
 
-    api = {
-    };
+    api = {};
 
     return api;
   }
