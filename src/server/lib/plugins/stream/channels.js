@@ -14,7 +14,7 @@ let youtubeKeywords = hashTags.join('|');
 
 let instagram = require('instagram-node').instagram();
 
-function setupInstagramSubscriptions(options) {
+function setupInstagramSubscriptions(options, server) {
 
   instagram.use({
     client_id: options.client_id,
@@ -26,7 +26,9 @@ function setupInstagramSubscriptions(options) {
   instagram.add_tag_subscription(
     tag,
     'http://nodeschooldaycr16.costaricajs.co/api/v1/publish/photo',
-    {},
+    {
+      verify_token: options.verify_token
+    },
     (err, result, remaining, limit) => {
 
     }
@@ -35,6 +37,8 @@ function setupInstagramSubscriptions(options) {
   instagram.subscriptions(function(err, subscriptions, remaining, limit){
     console.log(subscriptions);
   });
+
+  server.expose('instagram', instagram);
 
 }
 
@@ -85,7 +89,7 @@ function setupNotificationsChannel() {
   });
 }
 
-function activate(utils, options) {
+function activate(utils, options, server) {
 
   managers = utils;
 
@@ -110,7 +114,7 @@ function activate(utils, options) {
   fetchYoutube();
   //setInterval(fetchYoutube, 1000 * 60 * 10);
 
-  setupInstagramSubscriptions(options.instagram);
+  setupInstagramSubscriptions(options.instagram, server);
 
 }
 

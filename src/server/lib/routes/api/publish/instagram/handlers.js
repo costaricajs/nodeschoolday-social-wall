@@ -8,7 +8,7 @@ function publish(request, reply) {
 
   let options = {
     buffer: {},
-    input: request.params,
+    input: request.query,
     request,
     reply,
     result: {}

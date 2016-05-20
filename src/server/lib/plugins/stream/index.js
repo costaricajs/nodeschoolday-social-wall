@@ -30,10 +30,12 @@ exports.register = function (server, options, next) {
 
   console.log('socket ready');
 
-  channels.activate({
-    io,
-    youtube
-  }, options);
+  channels.activate(
+    {
+      io,
+      youtube
+    },
+    options, server);
 
   start(next);
 
