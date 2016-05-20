@@ -47,7 +47,7 @@ function onSuccess(options) {
 }
 
 function onError(options) {
-  options.reply(Boom.expectationFailed('Expected this to work', options.error || {}));
+  options.reply(Boom.expectationFailed(options.error || {}));
 }
 
 module.exports = {

@@ -14,6 +14,11 @@ function subscribe(options) {
 
   return new Promise((resolve, reject)=> {
 
+    console.log('--------------------------', 1);
+    console.log('options.request.query');
+    console.log(options.request.query);
+
+
     if (options.input['hub.verify_token'] === verifyToken) {
       options.result = options.input['hub.challenge'];
       resolve(options);
@@ -28,6 +33,6 @@ function subscribe(options) {
 
 // Public
 module.exports = {
-  subscribe,
-  publish
+  publish,
+  subscribe
 };
