@@ -1,6 +1,4 @@
-.tweets-wall {
-  transition: all 400ms ease-out 50ms;
-}
+.tweets-wall,
 .mm-avatar {
   border-radius: 50%;
 }
