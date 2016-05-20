@@ -48,7 +48,12 @@ function concatLibsCSS() {
     .pipe($.autoprefixer({
       browsers: config.browsers
     }))
-    .pipe($.cssnano({zindex: false}))
+    .pipe($.cssnano(
+      {
+        zindex: false,
+        safe: true
+      }
+    ))
     .pipe($.rev())
     .pipe(gulp.dest(config.releaseSource));
 

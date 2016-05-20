@@ -1,6 +1,6 @@
 'use strict';
 
-const mode = process.env.MODE || 'debug';
+const mode = process.env.MODE || 'production';
 
 const shared = require('./shared');
 
