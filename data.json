@@ -7,5 +7,26 @@
     "twitter": "josdavys",
     "github": "jdavys",
     "linkedin": "José David"
+  },
+  "node-wgomezv": {
+    "name": "Walter Gomez",
+    "bio": "Java Developer. Motorcycle enthusiast. Software Developer.",
+    "website": "",
+    "email": "walter.e.gomezv@gmail.com",
+    "github": "Warlord08",
+    "twitter": "_wgomezv",
+    "linkedin": "waltergomezv"
+  },
+  "nodea25salas": {
+    "name": " Andres salas",
+    "bio": " Estudiante",
+    "linkedin": "Andres Salas Brenes"
+  },
+  "node-school-ep": {
+    "name": "Esteban Piedra",
+    "bio": "Full Stack Developer. JS lover",
+    "website": "https://www.google.com/",
+    "email": "epiedra13@gmail.com",
+    "twitter": "epiedra93"
   }
 }
