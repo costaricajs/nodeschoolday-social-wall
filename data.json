@@ -17,16 +17,90 @@
     "twitter": "_wgomezv",
     "linkedin": "waltergomezv"
   },
-  "nodea25salas": {
-    "name": " Andres salas",
-    "bio": " Estudiante",
-    "linkedin": "Andres Salas Brenes"
-  },
   "node-school-ep": {
     "name": "Esteban Piedra",
     "bio": "Full Stack Developer. JS lover",
     "website": "https://www.google.com/",
     "email": "epiedra13@gmail.com",
     "twitter": "epiedra93"
+  },
+  "cesaqui89": {
+    "name": "Cesar Sánchez Q.",
+    "bio": "Developer, I think",
+    "website": "http://facebook.com/cesaqui89",
+    "email": "cesaqui89@gmail.com",
+    "twitter": "cesaqui89",
+    "github": "cesaqui89",
+    "linkedin": "cesaqui89"
+  },
+  "pallin08": {
+    "name": "Fabian Sandoval",
+    "bio": "JS and Node lover!",
+    "email": "fabiansherrera@gmail.com",
+    "twitter": "pallin08"
+  },
+  "ricardomarin": {
+    "name": "Ricardo",
+    "bio": "Full Stack Developer. JS lover - Founder of @lobcode.",
+    "website": "http://lobcode.com",
+    "email": "jorima93@gmail.com",
+    "github": "ricardomarin"
+  },
+  "joserojas20": {
+    "name": "Jose Rojas",
+    "bio": "Jose Rojas",
+    "website": "",
+    "email":"joseangelrojas18@gmail.com",
+    "github": "joserojas20",
+    "linkedin":"jose-angel-rojas-09034a40"
+  },
+  "rasso92": {
+    "name":"Alejandro Sanchez",
+    "bio":"Student",
+    "website":"http://getonthen3t.com",
+    "email":"rasso92@gmail.com",
+    "github":"rasso92"
+  },
+  "acarvajal23": {
+    "name": "Andres C.",
+    "bio": "Frontend Developer. Tech enthusiast.",
+    "website": "http://andrescarvajal.com",
+    "email": "acarvajal23@gmail.com",
+    "twitter": "andres_carvajal",
+    "github": "acarvajal23",
+    "linkedin": "acarvajal23"
+  },
+  "diegogil89": {
+    "name": "Diego Alonso Gil Aguilar",
+    "bio": "Software Developer.",
+    "website": "https://about.me/diego.a.gil",
+    "email": "diego.gil@pucp.pe",
+    "twitter": "diegogil1989",
+    "github": "JEEdiKnight",
+    "linkedin": "diegogil89"
+  },
+  "sekeko": {
+    "name": "Fenando Sequeira",
+    "bio": "Developer",
+    "website": "http://sekeko.github.io/",
+    "email": "fernando.sequeira@gmail.com",
+    "twitter": "sekeko",
+    "github": "sekeko"
+  },
+  "vanessafallas": {
+    "name": "Vanessa Fallas",
+    "bio": "Web Developer. Graphic Designer",
+    "website": "http://vanessafallas.com",
+    "email": "vanessa.fallas.amador@gmail.com",
+    "twitter": "vanessa_fallas",
+    "github": "vane.fallas",
+    "linkedin": "vanessafallas"
+  },
+  "tavoav": {
+    "name":"Gustavo Arrieta",
+    "bio":"Software Developer",
+    "email":"tavo.av@hotmail.com",
+    "twitter":"tavoav1",
+    "github":"tavoav"
   }
 }
