@@ -1,6 +1,6 @@
 'use strict';
 
-let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
+let hashTags = process.env.HASH_TAGS ? process.env.HASH_TAGS.split(',') : ['javascript', 'nodejs'];
 
 function fetchTwitter(options) {
 

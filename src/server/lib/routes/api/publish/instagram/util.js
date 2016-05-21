@@ -3,7 +3,7 @@
 const bluebird = require('bluebird');
 const coroutine = bluebird.coroutine;
 const verifyToken = process.env.APP_SECRET || 'nodeschooldaycr16';
-let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
+let hashTags = process.env.HASH_TAGS ? process.env.HASH_TAGS.split(',') : ['javascript', 'nodejs'];
 
 function publish(options) {
 

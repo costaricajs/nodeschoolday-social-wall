@@ -9,7 +9,7 @@ let stream;
 let twitter;
 let youtubeKey;
 let managers;
-let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
+let hashTags = process.env.HASH_TAGS ? process.env.HASH_TAGS.split(',') : ['javascript', 'nodejs'];
 let youtubeKeywords = hashTags.join('|');
 let instagram = require('instagram-node').instagram();
 
