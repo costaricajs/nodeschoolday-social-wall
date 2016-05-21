@@ -10,10 +10,10 @@ var routes = [
       auth: false,
       plugins: {},
       description: 'Get recent tweets',
-      notes: ['Publish a photo'],
-      tags: ['api', 'twitter', 'public', 'publish'],
+      notes: ['Recent tweets'],
+      tags: ['api', 'twitter', 'public'],
       validate: {},
-      handler: handlers.getPhotos
+      handler: handlers.fetchTwitter
     }
   }
 ];

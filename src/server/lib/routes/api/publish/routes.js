@@ -1,7 +1,9 @@
 const instagram = require('./instagram/routes');
+const twitter = require('./twitter/routes');
 
 var routes = [
-  ...instagram
+  ...instagram,
+  ...twitter
 ];
 
 module.exports = routes;

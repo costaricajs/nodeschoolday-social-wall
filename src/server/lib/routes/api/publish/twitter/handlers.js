@@ -4,7 +4,7 @@ const util = require('./util');
 
 const Boom = require('boom');
 
-function subscribe(request, reply) {
+function fetchTwitter(request, reply) {
 
   let options = {
     buffer: {},
@@ -16,7 +16,7 @@ function subscribe(request, reply) {
 
   console.log('subscribe');
 
-  util.subscribe(options)
+  util.fetchTwitter(options)
     .then(onSuccess)
     .catch(onError);
 
@@ -31,4 +31,5 @@ function onError(options) {
 }
 
 module.exports = {
+  fetchTwitter
 };

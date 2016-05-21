@@ -1,34 +1,43 @@
 'use strict';
 
-const bluebird = require('bluebird');
-const coroutine = bluebird.coroutine;
-const verifyToken = process.env.APP_SECRET || 'nodeschooldaycr16';
 let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
 
-function publish(options) {
-
-  return getPhotos(options);
-
-}
-
-function getPhotos(options) {
+function fetchTwitter(options) {
 
   return new Promise((resolve, reject)=> {
 
-    const instagram = options.request.server.plugins['stream'].instagram;
+    const twitter = options.request.server.plugins['stream'].twitter;
 
     console.log('options.input', options.input);
 
-    instagram.tag_media_recent(hashTags[0],
-      (error, result, remaining, limit) => {
+    const q = hashTags[0] + ' since:' + '2016-05-20';
+
+    twitter.get('search/tweets',
+      {
+        q: q,
+        count: 200
+      },
+      (error, data, response) => {
 
         if (error) {
           console.log(error);
+          options.error = 'tweets error';
+          reject(options);
         } else {
 
-          const notificationsChannel = options.request.server.plugins['stream'].notificationsChannel;
-          notificationsChannel.emit('instagram-picture', result);
-          options.result = result;
+          options.result = {
+            data
+          };
+
+
+          const tweets = data.statuses;
+
+          twitter.notify.emit('tweets', tweets);
+
+
+          //const notificationsChannel = options.request.server.plugins['stream'].notificationsChannel;
+          //notificationsChannel.emit('instagram-picture', result);
+          //options.result = result;
 
         }
 
@@ -40,27 +49,7 @@ function getPhotos(options) {
 
 }
 
-function subscribe(options) {
-
-  return new Promise((resolve, reject)=> {
-
-    console.log(options.request.query);
-
-    if (options.input['hub.verify_token'] === verifyToken) {
-      options.result = options.input['hub.challenge'];
-      resolve(options);
-    } else {
-      options.error = 'Verify token incorrect';
-      reject(options);
-    }
-
-  });
-
-}
-
 // Public
 module.exports = {
-  publish,
-  subscribe,
-  getPhotos
+  fetchTwitter
 };

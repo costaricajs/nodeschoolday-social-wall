@@ -36,6 +36,14 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       $scope.$apply();
     });
 
+    notifications.on('tweets', function (result) {
+      var _vm$tweets;
+
+      console.log('!!!!!!!!!!!!!!!tweets:', result);
+      (_vm$tweets = vm.tweets).unshift.apply(_vm$tweets, _toConsumableArray(result));
+      $scope.$apply();
+    });
+
     notifications.on('instagram-picture', function (result) {
       console.log('instagram-picture:', result);
       result.forEach(function (picture) {
@@ -48,7 +56,6 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
           vm.instagrams.unshift(picture);
         }
       });
-      //vm.instagrams.unshift(...result);
       console.log('vm.instagrams', vm.instagrams.length);
       $scope.$apply();
     });

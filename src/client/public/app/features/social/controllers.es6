@@ -34,6 +34,12 @@
       $scope.$apply();
     });
 
+    notifications.on('tweets', function (result) {
+      console.log('!!!!!!!!!!!!!!!tweets:', result);
+      vm.tweets.unshift(...result);
+      $scope.$apply();
+    });
+
     notifications.on('instagram-picture', function (result) {
       console.log('instagram-picture:', result);
       result.forEach((picture)=> {
@@ -46,7 +52,6 @@
           vm.instagrams.unshift(picture);
         }
       });
-      //vm.instagrams.unshift(...result);
       console.log('vm.instagrams', vm.instagrams.length);
       $scope.$apply();
     });

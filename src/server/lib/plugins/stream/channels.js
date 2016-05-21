@@ -72,6 +72,31 @@ function setupNotificationsChannel(server) {
 
   notificationsChannel.on('connection', (socket)=> {
 
+    const q = hashTags[0] + ' since:' + '2016-05-20';
+
+    twitter.get('search/tweets',
+      {
+        q: q,
+        count: 200
+      },
+      (error, data, response) => {
+
+        if (error) {
+          console.log(error);
+        } else {
+
+          const tweets = data.statuses;
+
+          console.log('tweets --- ');
+
+
+          notificationsChannel.emit('tweets', tweets);
+
+
+        }
+
+      });
+
     console.log(' *** onConnection to ---> ', 'notification Id: ', socket.id);
 
     socket.emit('identification',
@@ -124,6 +149,8 @@ function activate(utils, options, server) {
   setupNotificationsChannel(server);
 
   twitter = new Twitter(options.twitter);
+  twitter['notify'] = notificationsChannel;
+  server.expose('twitter', twitter);
 
   //stream = twitter.stream('statuses/filter', { track: 'mario' });
   stream = twitter.stream('statuses/filter', {track: hashTags});
