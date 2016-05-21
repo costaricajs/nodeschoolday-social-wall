@@ -37,10 +37,19 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     });
 
     notifications.on('instagram-picture', function (result) {
-      var _vm$instagrams;
-
       console.log('instagram-picture:', result);
-      (_vm$instagrams = vm.instagrams).unshift.apply(_vm$instagrams, _toConsumableArray(result));
+      result.forEach(function (picture) {
+        var exist = _.find(vm.instagrams, function (instagram) {
+          return instagram.id === picture.id;
+        });
+        if (!exist) {
+          console.log('----------------');
+          console.log('append', picture);
+          vm.instagrams.unshift(picture);
+        }
+      });
+      //vm.instagrams.unshift(...result);
+      console.log('vm.instagrams', vm.instagrams.length);
       $scope.$apply();
     });
 
@@ -50,9 +59,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       console.log('Activate: ', 'WallController!!!');
 
       socialFactory.getInstagramPictures().then(function (response) {
-        var _vm$instagrams2;
+        var _vm$instagrams;
 
-        (_vm$instagrams2 = vm.instagrams).unshift.apply(_vm$instagrams2, _toConsumableArray(response.data));
+        (_vm$instagrams = vm.instagrams).unshift.apply(_vm$instagrams, _toConsumableArray(response.data));
       });
     }
 

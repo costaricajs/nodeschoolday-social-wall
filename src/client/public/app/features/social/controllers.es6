@@ -36,7 +36,18 @@
 
     notifications.on('instagram-picture', function (result) {
       console.log('instagram-picture:', result);
-      vm.instagrams.unshift(...result);
+      result.forEach((picture)=> {
+        let exist = _.find(vm.instagrams, (instagram)=> {
+          return instagram.id === picture.id;
+        });
+        if (!exist) {
+          console.log('----------------');
+          console.log('append', picture);
+          vm.instagrams.unshift(picture);
+        }
+      });
+      //vm.instagrams.unshift(...result);
+      console.log('vm.instagrams', vm.instagrams.length);
       $scope.$apply();
     });
 

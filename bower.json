@@ -30,7 +30,8 @@
     "components-font-awesome": "master",
     "angular-ui-router": "ui-router#^0.2.18",
     "ui-router": "1.0.0-alpha.4",
-    "svg-morpheus": "^0.1.8"
+    "svg-morpheus": "^0.1.8",
+    "lodash": "^4.12.0"
   },
   "resolutions": {
     "angular-messages": "^1.4.8",

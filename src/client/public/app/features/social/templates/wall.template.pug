@@ -14,7 +14,7 @@ div(layout="column")
 
             md-tab(label='instagram')
               md-content.md-padding(layout-gt-sm="row", flex="", layout-wrap="", layout-align="center center")
-                .instagram-pic(ng-repeat='instagram in wallController.instagrams | limitTo: 50', flex-gt-sm="30")
+                .instagram-pic(ng-repeat='instagram in wallController.instagrams | limitTo: 300', flex-gt-sm="30")
                     a(href='{{instagram.link}}', target='_blank')
                       img.img-responsive(ng-src='{{instagram.images.standard_resolution.url}}')
 
@@ -22,13 +22,11 @@ div(layout="column")
               md-content.md-padding
                 h1.md-display-2 facebook
                 p
-                  | Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.
 
             md-tab(label='youtube')
               md-content.md-padding
                 h1.md-display-2 youtube
                 p
-                  | Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.
 
 
   div#participantes.bg-yellow(layout="column", layout-align="center center")

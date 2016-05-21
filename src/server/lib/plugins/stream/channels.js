@@ -9,13 +9,32 @@ let stream;
 let twitter;
 let youtubeKey;
 let managers;
-
 let hashTags = process.env.HASHTAGS ? process.env.HASHTAGS.split(',') : ['javascript', 'nodejs'];
 let youtubeKeywords = hashTags.join('|');
-
 let instagram = require('instagram-node').instagram();
 
-function setupInstagramSubscriptions(options, server) {
+//const intervalInstragram = 180000; // 3min
+const intervalInstragram = process.env.INSTAGRAM_FETCH_INTERVAL || 15000; // 10seg
+
+function fetchInstagram() {
+
+  console.log('fetchInstagram');
+
+  instagram.tag_media_recent(hashTags[0],
+    (error, result, remaining, limit) => {
+
+      if (error) {
+        console.log(error);
+      } else {
+
+        notificationsChannel.emit('instagram-picture', result);
+
+      }
+
+    });
+}
+
+function setupInstagram(options, server) {
 
   instagram.use({
     client_id: options.client_id,
@@ -31,7 +50,7 @@ function setupInstagramSubscriptions(options, server) {
     (error, result, remaining, limit) => {
 
 
-      if (error){
+      if (error) {
         console.log(error.error_message);
       }
 
@@ -121,7 +140,8 @@ function activate(utils, options, server) {
   fetchYoutube();
   //setInterval(fetchYoutube, 1000 * 60 * 10);
 
-  setupInstagramSubscriptions(options.instagram, server);
+  setupInstagram(options.instagram, server);
+  setInterval(fetchInstagram, intervalInstragram);
 
 }
 
