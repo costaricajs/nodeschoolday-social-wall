@@ -103,6 +103,97 @@
     "github": "JEEdiKnight",
     "linkedin": "diegogil89"
   },
+  "node-adricamb": {
+    "name" : "adricamb",
+    "bio" : "Java - iOS Developer",
+    "website": "",
+    "twitter" :"",
+    "email" : "adriiich@gmail.com",
+    "github" : "cambrussel",
+    "linkedin" : "adriana-cambronero-92221062"
+  },
+  "Thairon-node": {
+    "name" : "Thairon Solano",
+    "bio" : "I am learning node",
+    "website" : "",
+    "email" : "thaironsc@gmail.com",
+    "github" : "thaironsc"
+  },
+  "node-lucia": {
+    "name": "Lucia Serrano",
+    "bio": "Full Stack Developer - JS + RoR",
+    "email": "lucia@dino-it.com",
+    "twitter": "arisasdf",
+    "github": "arisasdf"
+  },
+  "skeletoncr": {
+    "name": "Rodney Espinoza",
+    "version": "1.0.1",
+    "bio": "FrontEnd Developer",
+    "Website": "",
+    "email": "xpunhamen@gmail.com",
+    "twitter": "xpunhamen",
+    "github": "",
+    "linkedin": "rodneyespinozam"
+  },
+  "learnnode_by_HHM": {
+    "name": "HHM",
+    "bio": "Full Stack Developer",
+    "website": "http://hhmcr.com",
+    "email": "hmillon@gmail.com",
+    "twitter": "hmillon",
+    "github": "hmillon",
+    "linkedin": "hmillon"
+  },
+  "chicus12-publish": {
+    "name": "Francisco Cerdas",
+    "bio": "Web Developer at SOIN by Day, Gamer by Night",
+    "website": "https://github.com/chicus12/",
+    "email": "chicus12@gmail.com",
+    "twitter": "chicus12",
+    "github": "chicus12",
+    "linkedin": "franciscocerdas"
+  },
+  "node-xdime": {
+    "name": "Laurens OB",
+    "bio": "asdf",
+    "email": "allan.valerin0612@gmail.com",
+    "twitter":"xDIME19",
+    "github":"XDIME"
+  },
+  "node-wwp": {
+    "name": "Winston Wright Palacios",
+    "bio": "Ing. Electromecanico",
+    "website": "http://www.www",
+    "email": "winstonwp@gmail.com",
+    "github": "winstonwp"
+  },
+  "acampos": {
+    "name": "Alex Campos",
+    "bio": "Software",
+    "website": "",
+    "email": "alex_cc90@hotmail.com",
+    "github": "acamposk",
+    "twitter": "lexCampos90"
+  },
+  "carranzalin": {
+    "name": "Lingsay Carranza",
+    "bio": "Jr",
+    "website": " ",
+    "email": "carranzalin@gmail.com",
+    "twitter": "carranzalin",
+    "github": "carranzalin",
+    "linkedin": "Lin Carranza"
+  },
+  "node-daniela": {
+    "name": "Daniela Solis Roas",
+    "bio": "",
+    "website": "http://lobcode.com",
+    "email": "danisr13@gmail.com",
+    "twitter": "@DaniSR92",
+    "github": "",
+    "linkedin": "Daniela Solis"
+  },
   "cesaqui89": {
     "name": "Cesar Sánchez Q.",
     "bio": "Developer, I think",
@@ -192,7 +283,6 @@
   "amekare": {
     "name": "Andrea Torres",
     "bio": "Linux lover",
-    "website": "...",
     "email":"amekare",
     "twitter":"amekare",
     "github":"amekare",
@@ -213,5 +303,153 @@
     "twitter": "sasasamaes",
     "github": "sasasamaes",
     "linkedin": "sasasamaes"
+  },
+  "vinixio": {
+    "name":"Vinixio Benavides",
+    "bio":"Technology Enthusiatic",
+    "website": "http://vinix.io",
+    "email": "vinixio@gmail.com",
+    "twitter": "vnxo",
+    "linkedin": "vinixio"
+  },
+  "KarolRojas90": {
+    "name": "Karol Rojas",
+    "bio": "Software Engineer, TIC-as, GDG Pura Vida",
+    "website": "http://karol13.com",
+    "email": "karol.rojas90@gmail.com",
+    "twitter": "KarolRojas90",
+    "github": "KarolRojas",
+    "linkedin": "Karol Rojas"
+  },
+  "sergioamm17": {
+    "name": "Sergio",
+    "bio": "Software Developer",
+    "email": "sergioamm17@gmail.com",
+    "twitter": "sergioamm17"
+  },
+  "Arxoss": {
+    "name":"Alexis Gamboa",
+    "bio":"EY Software Developer",
+    "email":"agamboa23",
+    "github":"agamboa23",
+    "twitter":"Arxoss",
+    "linkedin":"Alexis Gamboa"
+  },
+  "mchaves": {
+    "name": "Marvin Ch",
+    "bio": "Developer",
+    "website": "http://null.com",
+    "email": "marvinch80@gmail.com",
+    "twitter": "mchaves",
+    "github": "mchaves",
+    "linkedin": "mchaves"
+  },
+  "ltorres": {
+    "name": "Luis Torres Siles",
+    "bio" : "App native develop from softechfactory",
+    "website": "https://www.linkedin.com/fdotorres",
+    "email": "fdotorresiles@outlook.com",
+    "twitter": "ltorres",
+    "github": "ltorres",
+    "linkedin" : "fernando torres"
+  },
+  "sanchez182": {
+    "name": "Javier sanchez ramirez",
+    "bio": "Developer c#, Java script, Node.js, angular",
+    "email": "sanchez.arisan@gmail.com",
+    "github": "sanchez182",
+    "linkedin" : "javier sanchez"
+  },
+  "stepmabo": {
+    "name" : "Stefano Maietta Bolívar",
+    "bio" : "Front-End Developer - AngularJs, Firebase, MongoDB, Ionic...",
+    "email" : "15stemb@gmail.com",
+    "github": "stepmabo"
+  },
+  "jotasies": {
+    "name": "Daniel Tasies",
+    "bio": "Web Developer",
+    "email": "jotasies@gmail.com",
+    "twitter": "jotasies",
+    "linkedin": "jotasies"
+  },
+  "elpuas": {
+    "name": "Alfredo Navas Fernandini",
+    "bio": "WP Developer",
+    "website": "http://alfredonavas.com",
+    "email": "elpuas@gmail.com",
+    "github": "elpuas"
+  },
+  "anelrh26": {
+    "name": "Anel",
+    "bio": "iOS and Android developer",
+    "email":"anelrh26@gmail.com",
+    "twitter":"itsOnlyAnel",
+    "github":"anelrh26"
+  },
+  "mauriciofer": {
+    "name" : "Mauricio Fernández Mora",
+    "bio" : "Software developer",
+    "website" : "",
+    "email" : "mauriciofer@gmail.com",
+    "github" : "mauriciofer",
+    "linkedin" : "mauriciofer"
+  },
+  "fex09": {
+    "name": "Fenix Solis",
+    "bio": "Developer",
+    "website": "",
+    "email": "fsolisg@gmail.com",
+    "twitter": "Fexcr",
+    "github": "fex09"
+  },
+  "rociobla89": {
+    "name":"Rocío Blanco",
+    "bio":"Desarrolladora de Software",
+    "email":"rociobla89@gmail.com",
+    "github":"rociobla89"
+  },
+  "ess91": {
+    "name": "Emilio SS",
+    "bio": "Full Stack Developer. JS lover - SW GAP",
+    "website": "http://ess91.com",
+    "email": "ess91@gmail.com",
+    "twitter": "ess91",
+    "github": "ess91",
+    "linkedin": "ess91"
+  },
+  "yosvega": {
+    "name": "Modulo-JS",
+    "bio": "JS",
+    "website": "http://lobcode.com",
+    "email": "yosvega91@gmail.com",
+    "twitter": "yosvega"
+  },
+  "sasasamaes": {
+    "name": "Francisco Campos",
+    "bio": "Estudiante de Desarrollo de Sofware.",
+    "website": "http://francampos.me",
+    "email": "fcamposd@ucenfotec.ac.cr",
+    "twitter": "sasasamaes",
+    "github": "sasasamaes",
+    "linkedin": "sasasamaes"
+  },
+  "andresfv": {
+    "name": "andresfallasv",
+    "bio": "java developer una",
+    "email": "andresfallasv@gmail.com",
+    "github": "andresfv"
+  },
+  "Jef7": {
+    "name": "Jeffrey Camareno",
+    "bio": "Estudiante ingenieria en computacion, Tenologico de Costa Rica, Guitarrista",
+    "email": "jeffreycamareno7@gmail.com",
+    "github": "Jef7"
+  },
+  "JoseMejia96": {
+    "name": "Jose Mejia Bravo",
+    "bio":"Estudiante Universidad Nacional",
+    "email": "jrmb96@gmail.com",
+    "github": "JoseMejia96"
   }
 }
