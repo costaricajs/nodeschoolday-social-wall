@@ -24,6 +24,85 @@
     "email": "epiedra13@gmail.com",
     "twitter": "epiedra93"
   },
+  "node-jjherr3ra": {
+    "name":"Juan Jara",
+    "bio":"Student",
+    "website":"http://getonthen3t.com",
+    "email":"jjherr3ra@gmail.com",
+    "github":"jjherr3ra"
+  },
+  "node-cporras": {
+    "name": "Christian Porras",
+    "bio": "Analista Programador en Sea Servicios Multiples",
+    "website": "www.sea.co.cr",
+    "email": "christ@gmail.com",
+    "twitter": "cybertico77",
+    "github": "",
+    "linkedin": "cybertico77"
+  },
+  "node-davidmurillo": {
+    "name": "David MB",
+    "bio": "Full Stack Developer. JS lover",
+    "website": "http://www.imagilab.net",
+    "email": "dmurillo89_3@outlook.com",
+    "twitter": "dmurillo89",
+    "github": "dmurillo89",
+    "linkedin": "dmurillo89"
+  },
+  "lruiz-npm": {
+    "name": "Luis Diego Ruiz",
+    "bio":"Angular.js developer",
+    "website":"http://kompuhint.wordpress.com",
+    "email": "oracleruiz@gmail.com",
+    "twitter":"oracleruiz",
+    "github":"oracleruiz",
+    "linkedin":"lruiz"
+  },
+  "node-eliasdev": {
+    "name": "Elías Gómez",
+    "bio": "Full Stack Developer. JS lover",
+    "website": "http://ecolecua.me",
+    "email": "eliasdev@icloud.com",
+    "twitter": "eliasdev_cr",
+    "github": "eliasdev",
+    "linkedin": "eliasdev"
+  },
+  "node-chuz": {
+    "name": "Guillermo Ruiz",
+    "bio": "Full stack developer. Ionic/Cordova and RoR developer. Member of deLaGuayaba. 100% tico and Guapileño.",
+    "website": "http://www.facebook.com/chuz93",
+    "email": "chuz@delaguayaba.com",
+    "twitter": "gruiz747",
+    "github": "chuz93",
+    "linkedin": "chuz93"
+  },
+  "josernitos": {
+    "name": "josernitos",
+    "bio": "UX Designer from @estudiomanati",
+    "website": "https://medium.com/@josernitos",
+    "email": "rene.gutierrezalvarez@gmail.com",
+    "twitter": "josernitos",
+    "github": "nitos",
+    "linkedin": "josernitos"
+  },
+  "fireblend": {
+    "name":"Sergio Morales",
+    "bio":"Mobile Developer, Traveler, Tabletop Gamer. If not coding and listening to music, it's just the music.",
+    "website":"http://fireblend.com",
+    "email":"sergiome@gmail.com",
+    "twitter":"fireblend",
+    "github":"fireblend",
+    "linkedin":"sergiome"
+  },
+  "diegogil": {
+    "name": "Diego Alonso Gil Aguilar",
+    "bio": "Software Developer.",
+    "website": "https://about.me/diego.a.gil",
+    "email": "diego.gil@pucp.pe",
+    "twitter": "diegogil1989",
+    "github": "JEEdiKnight",
+    "linkedin": "diegogil89"
+  },
   "cesaqui89": {
     "name": "Cesar Sánchez Q.",
     "bio": "Developer, I think",
@@ -41,7 +120,6 @@
   },
   "ricardomarin": {
     "name": "Ricardo",
-    "bio": "Full Stack Developer. JS lover - Founder of @lobcode.",
     "website": "http://lobcode.com",
     "email": "jorima93@gmail.com",
     "github": "ricardomarin"
@@ -102,5 +180,38 @@
     "email":"tavo.av@hotmail.com",
     "twitter":"tavoav1",
     "github":"tavoav"
+  },
+  "solanors20": {
+    "name": "Steven Solano",
+    "website": "http://lobcode.com",
+    "email": "solanors20@gmail.com",
+    "twitter": "solanors20",
+    "github": "solanors20",
+    "linkedin": "solanors20"
+  },
+  "amekare": {
+    "name": "Andrea Torres",
+    "bio": "Linux lover",
+    "website": "...",
+    "email":"amekare",
+    "twitter":"amekare",
+    "github":"amekare",
+    "linkedin":"amekare"
+  },
+  "davide_vp": {
+    "name": "Davide_VP",
+    "bio": "Full Stack Developer. JS lover - Founder of @lobcode.",
+    "website": "http://lobcode.com",
+    "email": "davidevp@hotmail.com",
+    "twitter": "davide_vp"
+  },
+  "sasasamaes": {
+    "name": "Francisco Campos",
+    "bio": "Estudiante de Desarrollo de Sofware.",
+    "website": "http://francampos.me",
+    "email": "fcamposd@ucenfotec.ac.cr",
+    "twitter": "sasasamaes",
+    "github": "sasasamaes",
+    "linkedin": "sasasamaes"
   }
 }
