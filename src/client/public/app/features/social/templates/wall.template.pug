@@ -18,15 +18,12 @@ div(layout="column")
                     a(href='{{instagram.link}}', target='_blank')
                       img.img-responsive(ng-src='{{instagram.images.standard_resolution.url}}')
 
-            md-tab(label='facebook')
+            md-tab(label='resources')
               md-content.md-padding
-                h1.md-display-2 facebook
-                p
-
-            md-tab(label='youtube')
-              md-content.md-padding
-                h1.md-display-2 youtube
-                p
+                h1.md-display-2 Recursos
+                div()
+                  a(href="https://github.com/StevenPerez/nodeschool-setup/tree/master", target='_blank')
+                    | NodeJS Setup
 
 
   div#participantes.bg-yellow(layout="column", layout-align="center center")
